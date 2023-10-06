@@ -1,0 +1,3 @@
+[submodule "styles/fonts/Resource-Han-Rounded"]
+	path = styles/fonts/Resource-Han-Rounded
+	url = https://github.com/CyanoHao/Resource-Han-Rounded.git
