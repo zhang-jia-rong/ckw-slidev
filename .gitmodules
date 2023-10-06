@@ -1,3 +1,6 @@
 [submodule "styles/fonts/Resource-Han-Rounded"]
 	path = styles/fonts/Resource-Han-Rounded
 	url = https://github.com/CyanoHao/Resource-Han-Rounded.git
+[submodule "styles/fonts/maple-font"]
+	path = styles/fonts/maple-font
+	url = https://github.com/subframe7536/maple-font.git
