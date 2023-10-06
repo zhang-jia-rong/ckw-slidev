@@ -4,3 +4,6 @@
 [submodule "styles/fonts/maple-font"]
 	path = styles/fonts/maple-font
 	url = https://github.com/subframe7536/maple-font.git
+[submodule "styles/fonts/source-han-serif"]
+	path = styles/fonts/source-han-serif
+	url = https://github.com/adobe-fonts/source-han-serif.git
