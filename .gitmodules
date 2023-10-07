@@ -7,3 +7,6 @@
 [submodule "styles/fonts/source-han-serif"]
 	path = deps/source-han-serif/source-han-serif
 	url = https://github.com/adobe-fonts/source-han-serif.git
+[submodule "deps/source-han-sans"]
+	path = deps/source-han-sans
+	url = https://github.com/adobe-fonts/source-han-sans.git
