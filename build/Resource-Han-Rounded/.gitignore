@@ -1,0 +1,4 @@
+*
+!.gitignore
+!install-font.sh
+!CMakeLists.txt
