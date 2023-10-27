@@ -7,7 +7,7 @@ set(OUTPUT_DIR ${PROJ_ROOT}/styles/Resource-Han-Rounded)
 
 if(WIN32 AND NOT CYGWIN)
   set(BASE_SCRIPT_NAME InstallFont.bat)
-elseif(WIN32 AND NOT CYGWIN)
+else(WIN32 AND NOT CYGWIN)
   set(BASE_SCRIPT_NAME install-font.sh)
 endif(WIN32 AND NOT CYGWIN)
 
