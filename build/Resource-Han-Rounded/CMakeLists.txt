@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6.0)
 project(Resource-Han-Rounded NONE)
 
 string(REGEX REPLACE "/build.*" "" PROJ_ROOT ${PROJECT_SOURCE_DIR})
-set(OUTPUT_DIR ${PROJ_ROOT}/styles/Resource-Han-Rounded)
+set(OUTPUT_DIR ${PROJ_ROOT}/styles/${PROJECT_NAME})
 
 if(WIN32 AND NOT CYGWIN)
   set(BASE_SCRIPT_NAME InstallFont.bat)
@@ -24,7 +24,7 @@ add_custom_command(
   VERBATIM)
 
 add_custom_target(
-  Resource-Han-Rounded
+  ${PROJECT_NAME}
   ALL
   DEPENDS ${OUTPUT_DIR}/ResourceHanRoundedCN-Bold.ttf
           ${OUTPUT_DIR}/ResourceHanRoundedCN-ExtraLight.ttf
