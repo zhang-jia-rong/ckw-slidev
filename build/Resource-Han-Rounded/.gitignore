@@ -1,4 +1,5 @@
 *
 !.gitignore
+!InstallFont.bat
 !install-font.sh
 !CMakeLists.txt
