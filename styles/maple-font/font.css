@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono SC NF";
+  src: url(./MapleMono-SC-NF-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-Bold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-BoldItalic.woff2) format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-Italic.woff2) format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-LightItalic.woff2) format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url(./MapleMono-Regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

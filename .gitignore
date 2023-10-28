@@ -3,3 +3,10 @@ Makefile
 cmake_install.cmake
 gpg.strace
 CMakeCache.txt
+x64
+cmake_install.cmake
+ALL_BUILD.vcxproj.filters
+ZERO_CHECK.vcxproj.filters
+*.sln
+ALL_BUILD.vcxproj
+ZERO_CHECK.vcxproj
