@@ -11,10 +11,10 @@
   set "_URL=%_URL%/2.002R/%_BASE_ARCHIVE_NAME%"
   set "_OUTPUT_DIR=%_PROJ_ROOT%\styles\%_PROJ_NAME%"
   curl -fsSLO "%_URL%"
-  tar -xf "%_BASE_ARCHIVE_NAME%" -C "%_OUTPUT_DIR%" --wildcards "*.otf"
+  tar -xf "%_BASE_ARCHIVE_NAME%" -C "%_OUTPUT_DIR%" --strip-components=2 ^
+      "*.otf"
 
 :cleanUp
-  del /q "7zr.exe"
   del /q "%_BASE_ARCHIVE_NAME%"
   set "_DIRECTORY="
   set "_PROJ_ROOT="
