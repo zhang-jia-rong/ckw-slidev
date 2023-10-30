@@ -4,3 +4,4 @@ project(ckw-slidev NONE)
 
 add_subdirectory("build/Resource-Han-Rounded")
 add_subdirectory("build/maple-font")
+add_subdirectory("build/source-han-serif")
