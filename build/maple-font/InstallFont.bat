@@ -19,7 +19,6 @@
   tar -xf "%_BASE_WOFF2_ARCHIVE_NAME%" -C "%_PROJ_ROOT%\styles\%_PROJ_NAME%"
 
 :cleanUp
-  del /q "7zr.exe"
   del /q "%_BASE_TRUETYPE_ARCHIVE_NAME%"
   del /q "%_BASE_WOFF2_ARCHIVE_NAME%"
   set "_DIRECTORY="
