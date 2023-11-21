@@ -10,3 +10,4 @@ ZERO_CHECK.vcxproj.filters
 *.sln
 ALL_BUILD.vcxproj
 ZERO_CHECK.vcxproj
+node_modules
