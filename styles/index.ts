@@ -1,1 +1,1 @@
-import './font.css'
+import "./font.css";

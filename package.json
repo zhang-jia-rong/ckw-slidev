@@ -1,18 +1,18 @@
 {
-    "name": "ckw-slidev",
-    "version": "0.0.0",
-    "scripts": {
-        "dev": "slidev",
-        "release": "release-it"
-    },
-    "dependencies": {
-        "@slidev/cli": "^0.39.0",
-        "@slidev/theme-default": "^0.21.2",
-        "slidev-theme-demate": "^0.1.0-rc.5"
-    },
-    "devDependencies": {
-        "@csmith/release-it-calver-plugin": "^2023.11.0",
-        "@release-it/keep-a-changelog": "^5.0.0",
-        "release-it": "^17.0.0"
-    }
+  "name": "ckw-slidev",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "slidev",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.39.0",
+    "@slidev/theme-default": "^0.21.2",
+    "slidev-theme-demate": "^0.1.0-rc.5"
+  },
+  "devDependencies": {
+    "@csmith/release-it-calver-plugin": "^2023.11.0",
+    "@release-it/keep-a-changelog": "^5.0.0",
+    "release-it": "^17.0.0"
+  }
 }
