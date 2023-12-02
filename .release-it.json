@@ -1,0 +1,42 @@
+{
+  "git": {
+    "requireBranch": [
+      "release/*",
+      "master"
+    ],
+    "requireCommits": true,
+    "commitMessage": "chore: release ${version}",
+    "commitArgs": [
+      "--quiet",
+      "--signoff",
+      "-S"
+    ],
+    "pushArgs": [
+      "--follow-tags",
+      "-u"
+    ]
+  },
+  "npm": {
+    "versionArgs": [
+      "--sign-git-tag=true"
+    ]
+  },
+  "github": {
+    "release": true,
+    "releaseName": null,
+    "autoGenerate": true,
+    "comments": {
+      "submit": true,
+      "issue": "This issue has been resolved in version ${version}. The release is available on [GitHub here](${releaseUrl}).",
+      "pr": "This pull request is included in version ${version}. The release is available on [GitHub here](${releaseUrl})."
+    }
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits"
+      },
+      "infile": "CHANGELOG.md"
+    }
+  }
+}
