@@ -1,3 +1,5 @@
-@import url(./maple-font/font.css);
-@import url(./Resource-Han-Rounded/font.css);
-@import url(./source-han-serif/font.css);
+@import 'https://www.nerdfonts.com/assets/css/combo.css';
+
+@import './assets/fonts/mapleFont/font.css';
+@import './assets/fonts/resourceHanRounded/font.css';
+@import './assets/fonts/sourceHanSerif/font.css';
