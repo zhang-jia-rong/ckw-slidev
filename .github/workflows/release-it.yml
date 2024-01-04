@@ -1,0 +1,50 @@
+name: Publishing & Versioning
+
+on:
+  push:
+    branches:
+      - 'release/[0-9]+.[0-9]+'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set repository-specific username/email configuration
+        run: |
+          git config user.name "Zhang Jia Rong"
+          git config user.email zhang-jia-rong@outlook.com
+      - name: Import personal GPG key
+        run: echo -n "${GPG_PRIVATE_KEY}" | base64 --decode | gpg --import
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      - name: Use GPG signing key with Git (and GitHub)
+        run: git config user.signingkey ${GPG_KEY_ID}
+        env:
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - if: ${{ startsWith(github.ref_name, 'release/') }}
+        run: npm run release -- --preRelease=rc --npm.tag=next --plugins.@csmith/release-it-calver-plugin.increment=rc
+      - if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: npm run release --plugins.@csmith/release-it-calver-plugin.increment=patch

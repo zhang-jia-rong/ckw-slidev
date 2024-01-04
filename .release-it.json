@@ -1,25 +1,13 @@
 {
   "git": {
-    "requireBranch": [
-      "release/*",
-      "master"
-    ],
+    "requireBranch": ["release/*"],
     "requireCommits": true,
     "commitMessage": "chore: release ${version}",
-    "commitArgs": [
-      "--quiet",
-      "--signoff",
-      "-S"
-    ],
-    "pushArgs": [
-      "--follow-tags",
-      "-u"
-    ]
+    "commitArgs": ["--quiet", "--signoff", "-S"],
+    "pushArgs": ["--follow-tags", "-u"]
   },
   "npm": {
-    "versionArgs": [
-      "--sign-git-tag=true"
-    ]
+    "versionArgs": ["--sign-git-tag=true"]
   },
   "github": {
     "release": true,
@@ -32,11 +20,11 @@
     }
   },
   "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": {
-        "name": "conventionalcommits"
-      },
-      "infile": "CHANGELOG.md"
+    "@csmith/release-it-calver-plugin": {
+      "format": "yy.0m.minor"
+    },
+    "@release-it/keep-a-changelog": {
+      "filename": "CHANGELOG.md"
     }
   }
 }

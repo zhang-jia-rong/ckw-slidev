@@ -31,6 +31,11 @@ lint:
     - shfmt@3.6.0
     - taplo@0.8.1
     - trufflehog@3.63.7
+  ignore:
+    - linters: [ALL]
+      paths:
+        - .gitsecret/**
+        - pages/private/**/*.secret
 actions:
   disabled:
     - trunk-announce
