@@ -23,6 +23,10 @@
     "@csmith/release-it-calver-plugin": {
       "format": "yy.0m.minor"
     },
+    "@release-it/conventional-changelog": {
+      "infile": false,
+      "ignoreRecommendedBump": true
+    },
     "@release-it/keep-a-changelog": {
       "head": "master",
       "addUnreleased": true,
