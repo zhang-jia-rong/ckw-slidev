@@ -26,7 +26,6 @@
     "@iconify-json/logos": "^1.1.42",
     "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/twemoji": "^1.1.15",
-    "@release-it/conventional-changelog": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "eslint": "^8.56.0",
@@ -41,6 +40,7 @@
     "playwright-chromium": "^1.40.1",
     "prettier": "3.1.1",
     "release-it": "^17.0.1",
+    "standard-version": "^9.5.0",
     "typescript": "^5.3.3"
   }
 }

@@ -1,4 +1,7 @@
 {
+  "hooks": {
+    "after:bump": "npm exec -- standard-version"
+  },
   "git": {
     "requireBranch": ["release/*"],
     "requireCommits": true,
@@ -22,10 +25,6 @@
   "plugins": {
     "@csmith/release-it-calver-plugin": {
       "format": "yy.0m.minor"
-    },
-    "@release-it/conventional-changelog": {
-      "infile": "CHANGELOG.md",
-      "ignoreRecommendedBump": true
     }
   }
 }
