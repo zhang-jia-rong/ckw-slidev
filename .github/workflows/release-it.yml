@@ -45,6 +45,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
-        run: npm run release -- --preRelease=rc --npm.tag=next --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc --plugins.@csmith/release-it-calver-plugin.fallbackIncrement=calendar.rc --no-plugins.@release-it/keep-a-changelog.strictLatest
+        run: npm run release -- --preRelease=rc --npm.tag=next --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc --plugins.@csmith/release-it-calver-plugin.fallbackIncrement=calendar.rc
       - if: ${{ github.event_name == 'workflow_dispatch' && startsWith(github.ref_name, 'release/') }}
         run: npm run release --plugins.@csmith/release-it-calver-plugin.increment=minor --plugins.@csmith/release-it-calver-plugin.fallbackIncrement=minor
