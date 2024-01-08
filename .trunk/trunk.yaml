@@ -18,10 +18,10 @@ runtimes:
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
   enabled:
-    - trivy@0.48.1
+    - trivy@0.48.2
     - yamllint@1.33.0
     - sort-package-json@2.6.0
-    - checkov@3.1.50
+    - checkov@3.1.51
     - eslint@8.56.0
     - git-diff-check
     - markdownlint@0.38.0
