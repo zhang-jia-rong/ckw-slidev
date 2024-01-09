@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "npm exec -- standard-version --first-release"
+    "after:bump": "npm exec -- standard-version"
   },
   "git": {
     "requireBranch": ["release/*"],
@@ -20,6 +20,11 @@
       "submit": true,
       "issue": "This issue has been resolved in version ${version}. The release is available on [GitHub here](${releaseUrl}).",
       "pr": "This pull request is included in version ${version}. The release is available on [GitHub here](${releaseUrl})."
+    }
+  },
+  "plugins": {
+    "@csmith/release-it-calver-plugin": {
+      "format": "yy.0m.minor"
     }
   }
 }
