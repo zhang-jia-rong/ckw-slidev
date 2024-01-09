@@ -10,7 +10,7 @@
   "scripts": {
     "commitlint": "commitlint --edit",
     "dev": "slidev",
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "release": "release-it"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.19.2",
     "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
     "lint-staged": "^15.2.0",
     "playwright-chromium": "^1.40.1",
     "prettier": "3.1.1",

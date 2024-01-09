@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "npm exec -- standard-version"
+    "after:bump": "npm exec -- standard-version --first-release"
   },
   "git": {
     "requireBranch": ["release/*"],
