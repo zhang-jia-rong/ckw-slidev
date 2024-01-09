@@ -4,7 +4,6 @@
   },
   "git": {
     "requireBranch": ["release/*"],
-    "requireCommits": true,
     "commitMessage": "chore: release ${version}",
     "commitArgs": ["--quiet", "--signoff", "-S"],
     "pushArgs": ["--follow-tags", "-u"]
