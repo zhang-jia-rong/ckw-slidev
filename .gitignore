@@ -733,4 +733,5 @@ FodyWeavers.xsd
 /PROJECT_MIGRATION_LOG.txt
 .gitsecret/keys/random_seed
 !*.secret
-pages/private/training/technical-skills/software-testing/intro.md
+pages/demate/training/technical-skills/software-testing/intro.md
+pages/demate/annual-performance-review/2023.md
