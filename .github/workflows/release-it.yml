@@ -42,12 +42,14 @@ jobs:
         run: git config user.signingkey ${GPG_KEY_ID}
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' }}
+        run: git checkout -b release/$(date +'%Y.%m')
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' || (github.event_name == 'push' && startsWith(github.ref_name, 'release/')) }}
         run: npm run release -- --ci --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc
       - if: ${{ github.event_name == 'workflow_dispatch' && startsWith(github.ref_name, 'release/') }}
         run: npm run release -- --ci --plugins.@csmith/release-it-calver-plugin.increment=minor
