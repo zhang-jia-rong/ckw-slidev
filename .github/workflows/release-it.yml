@@ -50,7 +50,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' }}
-        run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc
+        run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc
       - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
         run: npm run release -- --ci --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc
       - if: ${{ github.event_name == 'workflow_dispatch' && startsWith(github.ref_name, 'release/') }}
