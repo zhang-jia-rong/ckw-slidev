@@ -1,6 +1,6 @@
 {
   "name": "ckw-slidev",
-  "version": "2024.01.0-rc.0",
+  "version": "2024.1.0-rc.0",
   "description": "ckw-slidev",
   "author": {
     "name": "Zhang Jia Rong <zhang-jia-rong@outlook.com>"
@@ -11,8 +11,7 @@
     "commitlint": "commitlint --edit",
     "dev": "slidev",
     "prepare": "is-ci || husky install",
-    "release": "release-it",
-    "postversion": "sed -i 's/\"version\": \"\\(.*\\)\\.\\([0-9]\\)\\.\\(.*\\)\",/\"version\": \"\\1.0\\2.\\3\",/g' package.json && npm install --package-lock-only"
+    "release": "release-it"
   },
   "dependencies": {
     "@slidev/cli": "^0.46.1",
