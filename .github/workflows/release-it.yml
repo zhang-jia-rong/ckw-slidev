@@ -5,7 +5,11 @@ on:
     branches:
       - 'release/[0-9]+.[0-9]+'
   workflow_dispatch:
-
+    inputs:
+      releaseVersion:
+        description: 'The SemVer extracted from "target branch" name'
+        required: false
+        type: string
 env:
   HUSKY: 0
 
@@ -42,15 +46,21 @@ jobs:
         run: git config user.signingkey ${GPG_KEY_ID}
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.releaseVersion == '' }}
         run: git checkout -b release/$(date +'%Y.%-m')
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.releaseVersion != '' }}
+        run: |
+          git checkout release/${{ github.event.inputs.releaseVersion }}
+          git merge --ff-only develop
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.releaseVersion == '' }}
         run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.releaseVersion != '' }}
+        run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=minor.rc
       - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
         run: npm run release -- --ci --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc
       - if: ${{ github.event_name == 'workflow_dispatch' && startsWith(github.ref_name, 'release/') }}
