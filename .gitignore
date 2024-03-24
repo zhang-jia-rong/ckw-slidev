@@ -733,27 +733,3 @@ FodyWeavers.xsd
 # Note all the contents of the .gitsecret/ folder should be checked in, /except/ the random_seed file.
 .gitsecret/keys/random_seed
 !*.secret
-pages/demate/training/technical-skills/software-testing/intro.md
-pages/demate/annual-performance-review/2023.md
-public/assets/images/ServoStudio\ 数据记录文件02_18_2023\ 13_45_35.png
-public/assets/svg/bus.svg
-public/assets/svg/比较版本\ ·\ 张家荣\ \ 工作\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/CICD\ 分析\ ·\ 最近\ 30\ 次提交的流水线持续时间\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/流水线\ ·\ 作业依赖项\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/CICD\ 分析\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/流水线\ ·\ 作业\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/Count.svg
-public/assets/svg/流水线\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/DMCAPI共享对象库.svg
-public/assets/svg/流水线编辑器\ ·\ Build\ Job\ -\ build\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg              
-public/assets/svg/E_CAT_4c_oT.svg
-public/assets/svg/流水线编辑器\ ·\ Build\ Job\ -\ doxygen\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/EtherCAT\ State\ Machine.svg
-public/assets/svg/流水线编辑器\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/MCMSG流.svg
-public/assets/svg/详细开发.svg
-public/assets/svg/SubDevice\ structure\ and\ EtherCAT\ SubDevice\ Controller.svg
-public/assets/svg/软限位\ \(\!22\)\ ·\ 合并请求\ ·\ 电子组\ \ DMCAPI\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/使用模型.svg
-public/assets/svg/运维仪表盘\ ·\ 极狐GitLab\ Screenshot.svg
-public/assets/svg/全局偏移量.svg
