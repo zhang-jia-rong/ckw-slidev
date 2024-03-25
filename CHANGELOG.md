@@ -1,5 +1,12 @@
 # Change Log
 
+## [2024.3.0-rc.1](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.1.2...2024.3.0-rc.1) (2024-03-25)
+
+
+### Features
+
+* conduct a PM analysis of grinding software ([999c79a](https://github.com/zhang-jia-rong/ckw-slidev/commit/999c79ab173e1d5053ada814555a13565a84d22e))
+
 ## [2024.1.2](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.1.2-rc.0...2024.1.2) (2024-02-23)
 
 ## [2024.1.2-rc.0](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.1.1...2024.1.2-rc.0) (2024-01-31)
