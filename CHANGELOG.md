@@ -1,5 +1,7 @@
 # Change Log
 
+## [2024.3.0](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.3.0-rc.1...2024.3.0) (2024-04-11)
+
 ## [2024.3.0-rc.1](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.1.2...2024.3.0-rc.1) (2024-03-25)
 
 
