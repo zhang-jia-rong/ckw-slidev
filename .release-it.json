@@ -1,0 +1,112 @@
+{
+  "git": {
+    "requireBranch": ["release/*"],
+    "requireCommits": true,
+    "commitMessage": "chore: release ${version}",
+    "commitArgs": ["--quiet", "--signoff", "-S"],
+    "pushArgs": ["--follow-tags", "-u"]
+  },
+  "npm": {
+    "versionArgs": ["--sign-git-tag=true"]
+  },
+  "github": {
+    "release": true,
+    "releaseName": null,
+    "autoGenerate": true,
+    "comments": {
+      "submit": true,
+      "issue": "This issue has been resolved in version ${version}. The release is available on [GitHub here](${releaseUrl}).",
+      "pr": "This pull request is included in version ${version}. The release is available on [GitHub here](${releaseUrl})."
+    }
+  },
+  "plugins": {
+    "@csmith/release-it-calver-plugin": {
+      "format": "yyyy.mm.minor"
+    },
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "atom",
+        "types": [
+          {
+            "type": ":art:",
+            "section": "Code Formatting and Style",
+            "hidden": false
+          },
+          {
+            "type": ":racehorse:",
+            "section": "Performance Enhancements",
+            "hidden": false
+          },
+          {
+            "type": ":non-potable_water:",
+            "section": "Memory Leak Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":memo:",
+            "section": "Documentation Updates",
+            "hidden": false
+          },
+          {
+            "type": ":penguin:",
+            "section": "Linux Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":apple:",
+            "section": "Mac OS Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":checkered_flag:",
+            "section": "Windows Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":bug:",
+            "section": "Bug Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":fire:",
+            "section": "Dead Code and Asset Removal",
+            "hidden": false
+          },
+          {
+            "type": ":green_heart:",
+            "section": "CI Build Fixes",
+            "hidden": false
+          },
+          {
+            "type": ":white_check_mark:",
+            "section": "Adding Tests",
+            "hidden": false
+          },
+          {
+            "type": ":lock:",
+            "section": "Security Enhancements",
+            "hidden": false
+          },
+          {
+            "type": ":arrow_up:",
+            "section": "Dependency Upgrades",
+            "hidden": false
+          },
+          {
+            "type": ":arrow_down:",
+            "section": "Dependency Downgrades",
+            "hidden": false
+          },
+          {
+            "type": ":shirt:",
+            "section": "Style Corrections",
+            "hidden": false
+          }
+        ]
+      },
+      "ignoreRecommendedBump": true,
+      "infile": "CHANGELOG.md",
+      "header": "# Changelog"
+    }
+  }
+}

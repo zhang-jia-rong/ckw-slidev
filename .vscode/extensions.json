@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "antfu.iconify",
+    "antfu.slidev",
+    "esbenp.prettier-vscode",
+    "trunk.io"
+  ]
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-Bold.otf) format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-ExtraLight.otf) format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-Heavy.otf) format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-Light.otf) format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-Medium.otf) format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-Regular.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url(/assets/fonts/SourceHanSerifCN-SemiBold.otf) format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
