@@ -2,7 +2,7 @@
   "git": {
     "requireBranch": ["release/*"],
     "requireCommits": true,
-    "commitMessage": "chore: release ${version}",
+    "commitMessage": "Release ${version}",
     "commitArgs": ["--quiet", "--signoff", "-S"],
     "pushArgs": ["--follow-tags", "-u"]
   },
