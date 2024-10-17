@@ -1,5 +1,7 @@
 # Changelog
 
+# [2024.10.0](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.10.0-rc.0...2024.10.0) (2024-10-17)
+
 # 2024.10.0-rc.0 (2024-10-17)
 
 
