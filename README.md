@@ -14,7 +14,7 @@ Welcome to [ckw-slidev](https://github.com/zhang-jia-rong/ckw-slidev) (Cheung Ka
 
 ## Introduction
 
-ckw-slidev is a presentation tool that combines the power of [Markdown](https://daringfireball.net/projects/markdown/) with the flexibility of [Vue.js](https://vuejs.org/). It allows you to create beautiful presentations with ease. ✨
+`ckw-slidev` is my personal presentation tool that combines the power of [Markdown](https://daringfireball.net/projects/markdown/) with the flexibility of [Vue.js](https://vuejs.org/). It allows me to create beautiful presentations with ease. ✨
 
 ## Features
 

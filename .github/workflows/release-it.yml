@@ -6,7 +6,7 @@ on:
       - release/[1-9][0-9]*.[1-9][0-9]*
   workflow_dispatch:
     inputs:
-      release-branch-name:
+      release-branch-calver:
         required: false
         type: string
 env:
@@ -42,20 +42,20 @@ jobs:
       - run: git config user.signingkey ${GPG_KEY_ID}
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-name == '' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver == '' }}
         run: git checkout -b release/$(date +'%Y.%-m')
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-name != '' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver != '' }}
         run: |
-          git checkout release/${{ github.event.inputs.release-branch-name }}
+          git checkout release/${{ github.event.inputs.release-branch-calver }}
           git merge --ff-only develop
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
       - run: npm ci
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-name == '' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver == '' }}
         run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-name != '' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver != '' }}
         run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=minor.rc
       - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
         run: npm run release -- --ci --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc

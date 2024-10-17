@@ -1,7 +1,7 @@
 {
   "name": "ckw-slidev",
   "version": "0.0.0",
-  "description": "ckw-slidev",
+  "description": "A powerful and customizable presentation tool built with Slidev, designed for personal use. It features interactive slides, modern themes, and seamless integration with popular development tools.",
   "author": {
     "name": "Zhang Jia Rong <zhang-jia-rong@outlook.com>"
   },
