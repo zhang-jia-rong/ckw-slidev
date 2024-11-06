@@ -1,3 +1,3 @@
 {
-  "*": "./trunk fmt --force"
+  "*": "npm run fmt"
 }

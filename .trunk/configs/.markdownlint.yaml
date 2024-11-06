@@ -1,17 +1,5 @@
-# Autoformatter friendly markdownlint config (all formatting rules disabled)
-default: true
-blank_lines: false
-bullet: false
-html: false
-indentation: false
-line_length: false
-spaces: false
-url: false
-whitespace: false
-
+# Prettier friendly markdownlint config (all formatting rules disabled)
 extends: markdownlint/style/prettier
-heading-increment: false
-single-h1: false
-no-trailing-punctuation: false
-first-line-h1: false
-single-trailing-newline: true
+
+# Allow inline HTML elements within Markdown content for enhanced formatting
+no-inline-html: false

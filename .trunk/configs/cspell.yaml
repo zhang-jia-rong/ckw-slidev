@@ -1,4 +1,30 @@
+# Version of the setting file. Always 0.2
 version: '0.2'
 # Suggestions can sometimes take longer on CI machines,
 # leading to inconsistent results.
 suggestionsTimeout: 5000 # ms
+# Current active spelling language
+language: en
+# List of words to be always considered correct
+words:
+  - calver
+  - cheung
+  - csmith
+  - esbenp
+  - iconify
+  - infile
+  - rong
+  - slidev
+  - trunkio
+  - unplugin
+  - zhang
+# List of words to be always considered incorrect
+# This is useful for offensive words and common spelling errors.
+flagWords: []
+# Files and directories to exclude from spell checking
+ignorePaths:
+  - .gitignore
+  - CODE_OF_CONDUCT.md
+  - LICENSE
+# Allow words formed by combining multiple words (e.g., 'typescript', 'webpack')
+allowCompoundWords: true
