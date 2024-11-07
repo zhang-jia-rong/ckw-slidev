@@ -1,5 +1,10 @@
 name: Release It!
 
+permissions:
+  contents: write
+  packages: write
+  pull-requests: write
+
 on:
   push:
     branches:
@@ -7,13 +12,37 @@ on:
   workflow_dispatch:
     inputs:
       release-branch-calver:
+        description: Release branch calver in YYYY.MM format (e.g. 2024.3)
         required: false
         type: string
+
 env:
   HUSKY: 0
+  # Simplified validation without length()
+  RELEASE_BRANCH: ${{ github.event.inputs.release-branch-calver &&
+    contains(github.event.inputs.release-branch-calver, '.') &&
+    startsWith(github.event.inputs.release-branch-calver, '20') &&
+    github.event.inputs.release-branch-calver || '' }}
+  REF_NAME: ${{ github.ref_name }}
+  EVENT_NAME: ${{ github.event_name }}
 
 jobs:
+  validate-input:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate release branch format
+        env:
+          CALVER_INPUT: ${{ github.event.inputs.release-branch-calver }}
+        run: |
+          if [ ! -z "$CALVER_INPUT" ]; then
+            if ! [[ "$CALVER_INPUT" =~ ^20[0-9]{2}\.(0[1-9]|1[0-2])$ ]]; then
+              echo "Invalid release branch format. Must be YYYY.MM"
+              exit 1
+            fi
+          fi
+
   clean-install:
+    needs: validate-input
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,28 +65,41 @@ jobs:
       - run: |
           git config user.name "Zhang Jia Rong"
           git config user.email zhang-jia-rong@outlook.com
-      - run: echo -n "${GPG_PRIVATE_KEY}" | base64 --decode | gpg --import
-        env:
+      - env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-      - run: git config user.signingkey ${GPG_KEY_ID}
-        env:
+        run: echo -n "$GPG_PRIVATE_KEY" | base64 --decode | gpg --import
+      - env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver == '' }}
-        run: git checkout -b release/$(date +'%Y.%-m')
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver != '' }}
+        run: git config user.signingkey "$GPG_KEY_ID"
+
+      # Handle develop branch releases
+      - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && env.REF_NAME == 'develop' && env.RELEASE_BRANCH == '' }}
         run: |
-          git checkout release/${{ github.event.inputs.release-branch-calver }}
+          BRANCH_NAME="release/$(date +'%Y.%-m')"
+          git checkout -b "$BRANCH_NAME"
+
+      - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && env.REF_NAME == 'develop' && env.RELEASE_BRANCH != '' }}
+        env:
+          RELEASE_BRANCH_NAME: ${{ env.RELEASE_BRANCH }}
+        run: |
+          git checkout "release/$RELEASE_BRANCH_NAME"
           git merge --ff-only develop
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
       - run: npm ci
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver == '' }}
+
+      # Release commands using env vars
+      - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && env.REF_NAME == 'develop' && env.RELEASE_BRANCH == '' }}
         run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=calendar.rc
-      - if: ${{ github.event_name == 'workflow_dispatch' && github.ref_name == 'develop' && github.event.inputs.release-branch-calver != '' }}
+
+      - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && env.REF_NAME == 'develop' && env.RELEASE_BRANCH != '' }}
         run: npm run release -- --ci --no-git.requireUpstream --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=minor.rc
-      - if: ${{ github.event_name == 'push' && startsWith(github.ref_name, 'release/') }}
+
+      - if: ${{ env.EVENT_NAME == 'push' && startsWith(env.REF_NAME, 'release/') }}
         run: npm run release -- --ci --npm.tag=next --github.preRelease --plugins.@csmith/release-it-calver-plugin.increment=rc
-      - if: ${{ github.event_name == 'workflow_dispatch' && startsWith(github.ref_name, 'release/') }}
+
+      - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && startsWith(env.REF_NAME, 'release/') }}
         run: npm run release -- --ci --no-git.requireCommits --plugins.@csmith/release-it-calver-plugin.increment=minor
