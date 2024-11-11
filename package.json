@@ -3,7 +3,9 @@
   "version": "2024.10.1",
   "description": "A powerful and customizable presentation tool built with Slidev, designed for personal use. It features interactive slides, modern themes, and seamless integration with popular development tools.",
   "author": {
-    "name": "Zhang Jia Rong <zhang-jia-rong@outlook.com>"
+    "name": "Zhang Jia Rong",
+    "email": "zhang-jia-rong@outlook.com",
+    "url": "https://github.com/zhang-jia-rong"
   },
   "type": "module",
   "main": "src/app.js",
@@ -29,11 +31,13 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/format": "^19.5.0",
     "@csmith/release-it-calver-plugin": "^2023.12.0",
     "@release-it/conventional-changelog": "^8.0.1",
     "@trunkio/launcher": "^1.3.3",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
+    "conventional-changelog-atom": "^5.0.0",
     "eslint": "8.57.0",
     "eslint-plugin-vue": "^9.30.0",
     "husky": "^9.1.4",
