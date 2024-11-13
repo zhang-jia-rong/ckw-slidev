@@ -7,7 +7,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.4
+      ref: v1.6.2
       uri: https://github.com/trunk-io/plugins
 # Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)
 runtimes:
@@ -35,9 +35,6 @@ lint:
     - sort-package-json@2.10.1
     - stylelint@16.10.0
     - svgo@3.3.2
-    - trivy@0.56.2
-    - trufflehog-git@3.83.5
-    - trufflehog@3.83.5
     - trunk-toolbox@0.5.0
     - yamllint@1.35.1
   ignore:
