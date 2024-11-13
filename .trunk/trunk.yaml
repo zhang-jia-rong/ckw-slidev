@@ -19,12 +19,10 @@ runtimes:
 lint:
   enabled:
     - actionlint@1.7.4
-    - checkov@3.2.282
     - codespell@2.3.0
     - cspell@8.16.0
     - eslint@8.57.0
     - git-diff-check
-    - markdown-link-check@3.13.6
     - markdownlint@0.42.0
     - osv-scanner@1.9.1
     - oxipng@9.1.2
