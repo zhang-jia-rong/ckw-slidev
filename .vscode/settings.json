@@ -1,17 +1,17 @@
 {
   "editor.defaultFormatter": "trunk.io",
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
     "**/.trunk/*actions/": true,
     "**/.trunk/*logs/": true,
     "**/.trunk/*notifications/": true,
     "**/.trunk/*out/": true,
     "**/.trunk/*plugins/": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
     "**/node_modules": false
   },
   "git.alwaysSignOff": true
