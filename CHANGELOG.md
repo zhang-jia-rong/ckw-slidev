@@ -1,5 +1,14 @@
 # Changelog
 
+## 2024.12.0-rc.0 (2024-12-18)
+
+* :arrow_down: Downgrade trunk plugin ([49da67f](https://github.com/zhang-jia-rong/ckw-slidev/commit/49da67f))
+* :arrow_up: Add Motor Design Database v0.2 showcase ([ae74522](https://github.com/zhang-jia-rong/ckw-slidev/commit/ae74522))
+* :arrow_up: Upgrade lint configs and deps ([a9f918f](https://github.com/zhang-jia-rong/ckw-slidev/commit/a9f918f))
+* :fire: Enhance release-it workflow readability ([c02e5a9](https://github.com/zhang-jia-rong/ckw-slidev/commit/c02e5a9))
+* :shirt: Add JSON schema to release-it config ([7669f06](https://github.com/zhang-jia-rong/ckw-slidev/commit/7669f06))
+* :shirt: Cleanup trunk linting ([d3b5f81](https://github.com/zhang-jia-rong/ckw-slidev/commit/d3b5f81))
+
 ## [2024.10.1](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.10.1-rc.0...2024.10.1) (2024-11-08)
 
 ## [2024.10.1-rc.0](https://github.com/zhang-jia-rong/ckw-slidev/compare/2024.10.0...2024.10.1-rc.0) (2024-11-08)
