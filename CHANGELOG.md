@@ -1,5 +1,7 @@
 # Changelog
 
+## 2024.12.0 (2024-12-18)
+
 ## 2024.12.0-rc.0 (2024-12-18)
 
 * :arrow_down: Downgrade trunk plugin ([49da67f](https://github.com/zhang-jia-rong/ckw-slidev/commit/49da67f))
