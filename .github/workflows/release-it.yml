@@ -111,3 +111,9 @@ jobs:
       - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && startsWith(env.REF_NAME, 'release/') }}
         run: | # shell
           npm run release -- --ci --no-git.requireCommits --plugins.@csmith/release-it-calver-plugin.increment=minor
+          git checkout master
+          git merge --ff-only master
+
+      - run: | # shell
+          git checkout develop
+          git merge --ff-only develop
