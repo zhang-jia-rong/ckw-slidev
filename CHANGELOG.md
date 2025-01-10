@@ -1,5 +1,10 @@
 # Changelog
 
+## 2025.1.0-rc.0 (2025-01-10)
+
+* :arrow_up: Upgrade framework and add Q4'24 summary ([1df4a53](https://github.com/zhang-jia-rong/ckw-slidev/commit/1df4a53))
+* :lock: Convert icons to unencrypted SVG/PNG ([cdbdc25](https://github.com/zhang-jia-rong/ckw-slidev/commit/cdbdc25))
+
 ## 2024.12.0 (2024-12-18)
 
 ## 2024.12.0-rc.0 (2024-12-18)
