@@ -111,9 +111,11 @@ jobs:
       - if: ${{ env.EVENT_NAME == 'workflow_dispatch' && startsWith(env.REF_NAME, 'release/') }}
         run: | # shell
           npm run release -- --ci --no-git.requireCommits --plugins.@csmith/release-it-calver-plugin.increment=minor
+          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
           git checkout master
-          git merge --ff-only master
+          git merge --ff-only "$CURRENT_BRANCH"
 
       - run: | # shell
+          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
           git checkout develop
-          git merge --ff-only develop
+          git merge --ff-only "$CURRENT_BRANCH"
