@@ -114,8 +114,10 @@ jobs:
           CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
           git checkout master
           git merge --ff-only "$CURRENT_BRANCH"
+          git push
 
       - run: | # shell
           CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
           git checkout develop
           git merge --ff-only "$CURRENT_BRANCH"
+          git push
