@@ -1,6 +1,7 @@
 5-axis-aug-2024-closed-issues.png
 5-axis-controls-sprint-review-24-08-19.png
 5-axis-controls.jpeg
+ai-powered-project-proposals.png
 an-ocean-of-metrics.svg
 auto-roadmap.jpeg
 auto-schedule.png
@@ -76,6 +77,12 @@ controller-automation-system.svg
 controller-cnc-sdk-main-page.png
 controller-cnc-sdk-packages-1.png
 controller-cnc-sdk-packages.png
+digital-2025-04-01-1.svg
+digital-2025-04-01-2.svg
+ding-log-2025-01-22-2.svg
+ding-log-2025-01-22-3.svg
+ding-log-2025-01-22-4.svg
+ding-log-2025-01-22-5.svg
 ding-log-frontend-completion-rate-report.png
 ding-log-frontend-contacts.png
 ding-log-frontend-daily-report.png
@@ -89,6 +96,7 @@ ding-log-roadmap-24-12.png
 ding-log-weekly-plan-daily-report.svg
 ding-log-work-hours-completion-rate.svg
 ding-log.png
+ding-roadmap-q2-25.png
 ding-team.png
 doc-gen-visualize-v0.3.0-to-v0.4.0.png
 drive-studio-v0.1-acceptance.svg
@@ -106,6 +114,7 @@ driver-studio-v0.2-burnup-burndown.png
 driver-studio-v0.3-burnup-burndown.png
 driver-studio-v0.4-burnup-burndown.png
 driver-studio-v0.7-burnup-burndown.png
+echarts-architecture-plantuml-diagram.svg
 embedded-industrial-pc.svg
 ethercat-handheld-box.svg
 fanuc-siemens-interface-table.svg
@@ -117,6 +126,7 @@ help-viewer-logo.png
 help-viewer-nov-burnup-burndown.png
 help-viewer-oct-burnup-burndown.png
 ic-cost-estimation-method-selection.svg
+ic-kpi-okr-decision-tree.svg
 img-2730.jpg
 initial-cnc-function-comparison-clip.svg
 ipc-sdk-aug-2024-updated-issues.png
@@ -129,6 +139,7 @@ ipc-sdk-team-tags.png
 ipc-sdk-team.png
 issue-list-software-development-2024-08.png
 issues-reception-time-180d-25-01-06.png
+keba-plan-q2-25.png
 material-doc-gen-framework-main-v0.4.0.png
 material-docs-auto-logo.jpeg
 milestone-product-selection-v0.1-2024-08.png
@@ -144,6 +155,7 @@ motor-design-database-parameter-table-v0-3-0.png
 motor-design-database-roadmap-24-q4.png
 motor-design-database-role-management-v0-2-0.png
 motor-design-database-staff-permission-v0-2-0.png
+motor-design-database-system-overview.svg
 motor-design-database-torque-speed-curves-v0-2-0.png
 motor-design-database-user-management-v0-2-0.png
 motor-design-database-v0.1-burnup-burndown.png
@@ -157,6 +169,7 @@ motor-parameters-expand-v0-2-0.png
 motor-parameters-v0-2-0.png
 notes-activities-test-status-update-strategy.png
 okr-framework.svg
+okr-what-is-okr.svg
 operations-page-screenshot-24-09-23.png
 operations-page-screenshot-25-01-06.png
 operations-page-screenshot-v2.png
@@ -170,6 +183,7 @@ pmo-team.jpeg
 processon-diagraming-65c1804401345442d788b952.png
 product-selector-issues-list-2024-08.png
 product-selector-project.jpeg
+python-selenium-web-scraping.svg
 qt-creator-filesystem-cnc-project.png
 qt-creator-projects-cnc-overview.png
 release.svg
@@ -223,6 +237,7 @@ sdk-state-management-diagram.png
 servo-driver-config-tool-team-members.png
 servo-driver-software-logo.jpeg
 siemens-industrial-control-interface.svg
+software-issues-status-2024-04.png
 software-team-rd-department-logo.jpeg
 stacked-bar-chart-24-q4.svg
 time-sync.png
