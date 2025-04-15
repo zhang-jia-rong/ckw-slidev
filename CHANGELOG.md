@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.4.0-rc.1 (2025-04-15)
+
+* :green_heart: Fix release workflow merges ([ebbae35](https://github.com/zhang-jia-rong/ckw-slidev/commit/ebbae35))
+
 ## 2025.4.0-rc.0 (2025-04-15)
 
 * :arrow_up: Update Q4/Q1 presentation materials ([a6d6fd7](https://github.com/zhang-jia-rong/ckw-slidev/commit/a6d6fd7))
