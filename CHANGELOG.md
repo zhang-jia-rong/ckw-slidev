@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.4.0-rc.2 (2025-04-15)
+
+* :green_heart: Add missing git push commands ([7223a38](https://github.com/zhang-jia-rong/ckw-slidev/commit/7223a38))
+
 ## 2025.4.0-rc.1 (2025-04-15)
 
 * :green_heart: Fix release workflow merges ([ebbae35](https://github.com/zhang-jia-rong/ckw-slidev/commit/ebbae35))
